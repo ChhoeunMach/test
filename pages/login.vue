@@ -31,6 +31,9 @@
   </template>
   
   <script setup lang="ts">
+  definePageMeta({
+    layout: 'auth'
+  })
   import { ref } from 'vue';
   import { useAuthStore } from '~/stores/auth';
   
@@ -46,7 +49,7 @@
     loading.value = true;
     try {
       await authStore.login({ email: email.value, password: password.value });
-      navigateTo('/dashboard');
+      navigateTo('/');
     } catch (err) {
       error.value = err.message || 'Login failed.';
     } finally {

@@ -13,8 +13,6 @@ export default defineNuxtConfig({
 
   // modules: ['@nuxtjs/tailwindcss'],
   devtools: { enabled: false },
-
-
   modules: ['@vite-pwa/nuxt', '@pinia/nuxt'],
   ssr: false,
   pwa: {
@@ -43,4 +41,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  plugins: ['~/plugin/pinia'],
 })

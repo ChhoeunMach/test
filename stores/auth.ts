@@ -29,6 +29,7 @@ export const useAuthStore = defineStore('auth', {
       this.token = null;
       this.user = null;
       Cookies.remove('authToken');
+      window.location.href = '/login'
     },
   },
 });
